@@ -28,10 +28,10 @@ sequenceDiagram
 ```
 해당 다이어그램을 간단하게 요약하자면,
 1. `Developer`가 코드를 수정한다.
-2. git add  및 git commit을 통해 로컬에 저장한다.
-3. git push 명령어로 원격 저장소(GitHub)에 전송한다.
-4. LocalGit이 GitHubRepo에 데이터를 전송한다. (보통 HTTPS나 SSH 경로로)
+2. `git add`  및 `git commit`을 통해 로컬에 저장한다.
+3. `git push` 명령어로 원격 저장소(GitHub)에 전송한다.
+4. `LocalGit`이 `GitHubRepo`에 데이터를 전송한다. (보통 HTTPS나 SSH 경로로)
 5. GitHub는 요청을 수락하고 응답을 돌려준다.
-6. 로컬은 성공 여부를 Developer에게 알려준다.
+6. 로컬은 성공 여부를 `Developer`에게 알려준다.
 
-7. 
+```2. 해당 시퀀스 다이어그램에 따른 샘플 코드
