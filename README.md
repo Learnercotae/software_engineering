@@ -27,7 +27,7 @@ sequenceDiagram
     GitHubActions-->>Developer: CI/CD result notification
 ```
 해당 다이어그램을 간단하게 요약하자면,
-1. `**Developer**`가 코드를 수정한다.
+1. **`Developer`**가 코드를 수정한다.
 2. `**git add**`  및 `**git commit**`을 통해 로컬에 저장한다.
 3. `**git push**` 명령어로 원격 저장소(GitHub)에 전송한다.
 4. `**LocalGit**`이 `**GitHubRepo**`에 데이터를 전송한다. (보통 HTTPS나 SSH 경로로)
