@@ -169,7 +169,7 @@ if __name__ == "__main__":
 
 # 4. 모듈 평가 ( 모듈성, 책임 분리, 재사용성, 확장성, 테스트 가능성)
 
-### `모듈성 (Modularity)`: 양호
+### 모듈성 (Modularity): 양호
 클래스 단위로 `Developer`, `GitHubRepository`, `GitHubActions`의 책임이 분리되어 있음.
 각 구성요소는 독립적으로 기능을 수행하며, 역할이 명확히 정의됨.
 
@@ -179,7 +179,7 @@ if __name__ == "__main__":
 `TestServer`, `DeploymentServer`가 클래스가 아닌 내부 메서드로 표현되어 있어 역할 구분이 약간 모호함.
 → `TestServer`와 `DeploymentServer` 클래스로 분리 가능.
 
-### `책임 분리 (Separation of Concerns)`: 준수
+### 책임 분리 (Separation of Concerns): 준수
 `Developer`는 단순히 코드를 푸시하는 역할만 수행.
 `GitHubRepository`는 푸시 이벤트를 받고, `GitHubActions`를 호출.
 `GitHubActions`는 테스트 및 배포의 모든 로직을 담당.
@@ -191,7 +191,7 @@ if __name__ == "__main__":
 - SOLID 원칙 중 **단일 책임 원칙(SRP)**에 어긋날 수 있음.
 - → `TestRunner`, `Deployer`, `Notifier` 등을 별도 클래스로 위임할 수 있음.
 
-### `재사용성 (Reusability)`: 보통
+### 재사용성 (Reusability): 보통
 각 클래스는 다른 컨텍스트에서도 재사용 가능한 구조이나, 내부 구현이 간단한 `print()` 중심이라 재사용 범위가 제한됨.
 
 #### 개선 시나리오:
@@ -199,7 +199,7 @@ if __name__ == "__main__":
 - 외부 의존성을 주입하거나
 - 환경 설정 파일 또는 인터페이스 기반 설계로 리팩터링 필요
 
-### `확장성 (Extensibility)`: 우수
+### 확장성 (Extensibility): 우수
 현재 구조는 다음과 같은 기능 확장이 용이함:
 - Slack, Email 등 알림 채널 추가
 - 테스트 단계 구체화 (예: lint → unit test → e2e test)
@@ -207,7 +207,7 @@ if __name__ == "__main__":
 
 구조적으로 클래스와 메서드 기반으로 잘 분리되어 있어, 변화에 유연하게 대응할 수 있음.
 
-### `테스트 가능성 (Testability)`: 중간
+### 테스트 가능성 (Testability): 중간
 현재 로직은 `print()`로만 결과를 표현하기 때문에 유닛 테스트나 시뮬레이션이 어려움.
 랜덤 테스트/배포 결과 (`random.choice`)도 결정적 테스트 불가의 원인이 됨.
 
