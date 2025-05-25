@@ -133,14 +133,10 @@ if __name__ == "__main__":
 
 #### 개선 포인트:
 `GitHubActions`는 SRP(단일 책임 원칙)를 위배하고 있으므로, 다음처럼 분해할 수 있다:
-
-`CodeCheckoutService`
-
-`TestRunner`
-
-`Deployer`
-
-`Notifier`
+- `CodeCheckoutService`
+- `TestRunner`
+- `Deployer`
+- `Notifier`
 
 ### 결합도(Coupling) 평가
 - 결합도란?
