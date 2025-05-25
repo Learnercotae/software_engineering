@@ -1,5 +1,6 @@
 # software_engineering
 
+```mermaid
 sequenceDiagram
     participant Developer
     participant GitHubRepo
@@ -22,3 +23,4 @@ sequenceDiagram
     end
 
     GitHubActions-->>Developer: CI/CD result notification
+```
